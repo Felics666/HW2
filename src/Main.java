@@ -51,7 +51,7 @@ public class Main {
         System.out.println("Задача № 4");
 
         int bottlesInTwoMinutes = 16;
-        int bottlesInOneMinutes = 16/2;
+        int bottlesInOneMinutes = bottlesInTwoMinutes / 2;
         int minutesPerDay = 24 * 60;
         int minutesInThreeDays = minutesPerDay * 3;
         int minutesPerMonth = minutesPerDay * 30;
@@ -59,7 +59,7 @@ public class Main {
         int bottlesInTwentyMinutes = bottlesInOneMinutes * 20;
         int bottlesInThreeDays = minutesInThreeDays * bottlesInOneMinutes;
         int bottlesPerMonth = minutesPerMonth * bottlesInOneMinutes;
-        ///int bottlesPerMonth = bottlesInThreeDays * 10; ///зная сколько производи за три дня, можем выяснить производство за месяц.(В том случае если в месяце 30 дней)
+        ///int bottlesPerMonth = bottlesInThreeDays * 10; ///зная сколько производим за три дня, можем выяснить производство за месяц.(В том случае если в месяце 30 дней)
 
 
         System.out.println("За 20 минут машина произвела - " + bottlesInTwentyMinutes + " штук бутылок");
@@ -67,10 +67,78 @@ public class Main {
         System.out.println("За месяц машина произвела - " + bottlesPerMonth + " штук бутылок");
 
 
-        ///////Задача 4
+        ///////Задача 5
         System.out.println();
         System.out.println("Задача № 5");
 
+        int totalCansOfPaint = 120;
+        int whitePaintPerClass = 2;
+        int brownPaintPerClass = 4;
+
+        int totalClasses = totalCansOfPaint / (whitePaintPerClass + brownPaintPerClass);
+        int totalWhitePaint = totalClasses * whitePaintPerClass;
+        int totalBrownPaint = totalClasses * brownPaintPerClass;
+
+        System.out.println("В школе, где - " + totalClasses + " классов, нужно - " + totalWhitePaint + " банок белой краски и " + totalBrownPaint + " банок коричневой краски");
+
+        ///////Задача 6
+        System.out.println();
+        System.out.println("Задача № 6");
+
+        int weightOfBananas = 5 * 80;
+        int milkWeight = (200 * 105) / 100;
+        int iceCreamWeight = 2 * 100;
+        int weightOfRawEggs = 4 * 70;
+
+        int breakfastWeightInGrams = weightOfBananas + milkWeight + iceCreamWeight + weightOfRawEggs;
+        double breakfastWeightInKilograms = breakfastWeightInGrams / 1000.0;
+
+
+        System.out.println("Вес завтрвка в граммах = " + breakfastWeightInGrams + " гр.");
+        System.out.println("Вес завтрака в килограммах = " + breakfastWeightInKilograms + " кг.");
+
+        ///////Задача 7
+        System.out.println();
+        System.out.println("Задача № 7");
+
+        int weightLoss = 7;
+        int weightLossPerDay1 = 250;
+        int weightLossPerDay2 = 500;
+
+        int justDaysToLoseWeight1 = (weightLoss * 1000) / weightLossPerDay1;
+        int justDaysToLoseWeight2 = (weightLoss * 1000) / weightLossPerDay2;
+        int averageNumberOfDays = (justDaysToLoseWeight1 + justDaysToLoseWeight2) / 2;
+
+        System.out.println("Если спортсмен в день будет терять по 250 гр., то ему понадобится - " + justDaysToLoseWeight1 + " дней для достижения результата.");
+        System.out.println("Если спортсмен в день будет терять по 500 гр., то ему понадобится - " + justDaysToLoseWeight2 + " дней для достижения результата.");
+        System.out.println("Для достижения цели в среднем понадобится - " + averageNumberOfDays + " день");
+
+        ///////Задача 8
+        System.out.println();
+        System.out.println("Задача № 8");
+
+        int mashaIncome = 67760;
+        int denisIncome = 83690;
+        int kristinaIncome = 76230;
+
+        int mashaNewIncome = (int) (mashaIncome * 1.1);  /// более упрощеный вариант
+        //int mashaNewIncome = (mashaIncome * 10) / 100 + mashaIncome; //Вариант из школьной программы 5 класса
+        int denisNewIncome = (int) (denisIncome * 1.1); /// более упрощеный вариант
+        //int denisNewIncome = (denisIncome * 10) / 100 + denisIncome; //Вариант из школьной программы 5 класса
+        int kristinaNewIncome = (int) (kristinaIncome * 1.1); /// более упрощеный вариант
+        //int kristinaNewIncome = (kristinaIncome * 10) / 100 + kristinaIncome; //Вариант из школьной программы 5 класса
+
+        int mashaAnnualIncome = mashaIncome * 12;
+        int denisAnnualIncome = denisIncome * 12;
+        int kristinaAnnualIncome = kristinaIncome * 12;
+
+        int mashaNewAnnualIncome = mashaNewIncome * 12;
+        int denisNewAnnualIncome = denisNewIncome * 12;
+        int kristinaNewAnnualIncome = kristinaNewIncome * 12;
+
+        System.out.println("Маша теперь получает - " + mashaNewIncome + " рублей. Годовой доход вырос на - " + (mashaNewAnnualIncome - mashaAnnualIncome) + " рублей");
+        System.out.println("Денис теперь получает - " + denisNewIncome + " рублей. Годовой доход вырос на - " + (denisNewAnnualIncome - denisAnnualIncome) + " рублей");
+        System.out.println("Кристина теперь получает - " + kristinaNewIncome + " рублей. Годовой доход вырос на - " + (kristinaNewAnnualIncome - kristinaAnnualIncome) + " рублей");
 
     }
 }
